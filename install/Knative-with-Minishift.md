@@ -176,7 +176,11 @@ curl -s https://raw.githubusercontent.com/knative/docs/master/install/scripts/is
    ```
 3. Monitor the Istio components until all of the components show a `STATUS` of
    `Running` or `Completed`:
-   `shell while oc get pods -n istio-system | grep -v -E "(Running|Completed|STATUS)"; do sleep 5; done`
+
+   ```shell
+   while oc get pods -n istio-system | grep -v -E "(Running|Completed|STATUS)"; do sleep 5; done`
+   ```
+
    > **NOTE:** It will take a few minutes for all the components to be up and
    > running.
 
